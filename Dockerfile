@@ -1,5 +1,5 @@
 FROM docker.io/bitnami/spark:3
-LABEL maintainer="s1mplecc <s1mple951205@gmail.com>"
+LABEL maintainer="huermosi <huyaoban@gmail.com>"
 LABEL description="Docker image with Spark (3.1.2) and Hadoop (3.2.0), based on bitnami/spark:3. \
 For more information, please visit https://github.com/s1mplecc/spark-hadoop-docker."
 
