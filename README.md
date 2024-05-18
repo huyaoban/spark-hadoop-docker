@@ -52,3 +52,8 @@ TODO
 默认情况下macos和windows下，宿主机和容器间的网络是不互通的，导致直接在宿主机上开发时，idea里访问不到容器上的服务，理论上应该可以不用做docker的端口转发（没试过）。
 参考这里
 https://github.com/wenjunxiao/mac-docker-connector/blob/master/README-ZH.md
+
+## 管理界面
+http://master:9870/dfshealth.html#tab-overview
+http://master:8080/
+http://master:18080/

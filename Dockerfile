@@ -34,7 +34,9 @@ RUN mv /tmp/ssh_config /root/.ssh/config && \
     mv /tmp/core-site.xml $HADOOP_CONF_DIR/core-site.xml && \
     mv /tmp/mapred-site.xml $HADOOP_CONF_DIR/mapred-site.xml && \
     mv /tmp/yarn-site.xml $HADOOP_CONF_DIR/yarn-site.xml && \
-    mv /tmp/workers $HADOOP_CONF_DIR/workers
+    mv /tmp/workers $HADOOP_CONF_DIR/workers && \
+    mv /tmp/spark-defaults.conf $SPARK_HOME/conf/spark-defaults.conf && \
+    mv /tmp/spark-env.sh $SPARK_HOME/conf/spark-env.sh
 
 COPY start-hadoop.sh /opt/start-hadoop.sh
 
