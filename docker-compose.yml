@@ -12,6 +12,9 @@ services:
       - SPARK_SSL_ENABLED=no
     volumes:
       - ~/docker/spark/share:/opt/share
+    networks:
+      spark-hadoop:
+        ipv4_address: 172.21.0.2
   spark-worker-1:
     image: huyaoban/spark-hadoop:3
     hostname: worker1
@@ -31,6 +34,9 @@ services:
       # - SPARK_SSL_PROTOCOL=TLSv1.2
     volumes:
       - ~/docker/spark/share:/opt/share
+    networks:
+      spark-hadoop:
+        ipv4_address: 172.21.0.3
   spark-worker-2:
     image: huyaoban/spark-hadoop:3
     hostname: worker2
@@ -50,3 +56,13 @@ services:
       # - SPARK_SSL_PROTOCOL=TLSv1.2
     volumes:
       - ~/docker/spark/share:/opt/share
+    networks:
+      spark-hadoop:
+        ipv4_address: 172.21.0.4
+networks:
+  spark-hadoop:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.21.0.0/24
